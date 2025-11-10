@@ -29,6 +29,18 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'  
+     
+      - name: Install dependencies
+        run: npm install  
+  
+      - name: Build Project
+        run: |
+          npm rebuild
+      
       - name: Download & Setup Bridge CLI on Windows
         if: runner.os == 'Windows'
         shell: powershell
