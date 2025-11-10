@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ### SCANNING: Required fields
-      BRIDGE_POLARIS_SERVERURL: ${{ secrets.POLARIS_URL }}
+      BRIDGE_POLARIS_SERVERURL: ${{ secrets.POLARIS_SERVER_URL }}
       BRIDGE_POLARIS_ACCESSTOKEN: ${{ secrets.POLARIS_ACCESS_TOKEN }}
       ### ASSESSMENT TYPES
       BRIDGE_POLARIS_ASSESSMENT_TYPES: SAST,SCA
